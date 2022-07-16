@@ -8,16 +8,17 @@ import Footer from '@organisms/Footer'
 
 import GlobalStyles from '@styles/global'
 import theme from '@styles/theme'
+import 'react-simple-flex-grid/lib/main.css'
 import '@styles/fonts.css'
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<ThemeProvider theme={theme}>
 			<DefaultSeo {...SEO} />
-			<GlobalStyles />
 			<Navbar />
 			<Component {...pageProps} />
 			<Footer />
+			<GlobalStyles />
 		</ThemeProvider>
 	)
 }
